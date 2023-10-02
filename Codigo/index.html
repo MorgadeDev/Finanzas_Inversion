@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
+    <title>Iniciar sesión</title>
 </head>
 <body>
-    
-<script src="cuentas.js"></script>
+    <h2>Iniciar sesión</h2>
+    <form action="validar.php" method="post" id="loginForm">
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required><br><br>
 
+        <label for="age">Edad:</label>
+        <input type="text" id="age" name="age" required><br><br>
+        
+        <label for="telephone">Telefono:</label>
+        <input type="text" id="telephone" name="telephone" required><br><br>
 
+        <input type="submit" value="Iniciar sesión">
+    </form>
+
+    <script src="cuentas.js"></script>
 </body>
 </html>
+
+

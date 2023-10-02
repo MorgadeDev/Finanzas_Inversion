@@ -1,28 +1,22 @@
-class Usuario{
-    constructor(firstName,lastName,age,mail,telefone){
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.mail = mail;
-        this.telefone = telefone;
-    }
+document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    
+    // Obtener los valores del formulario
+    var usuario = document.getElementById('username').value;
+    var contrasena = document.getElementById('password').value;
+    var telefono = document.getElementById('telephone').value;
+    var edad = document.getElementById('age').value;
 
-}
-//Creacion de 2 objetos Usuario
-const felipe = new Usuario("Felipe","Morgade",21,"felipemorgade007@gmail.com",2233020613);
-const toto = new Usuario("Tomas","llull",21,"toto@gmail.com",2235955953);
+    // Aquí puedes procesar los datos, por ejemplo, mostrarlos en la consola
+    console.log('Usuario: ' + usuario);
+    console.log('Contraseña: ' + contrasena);
+    console.log('Edad: ' + edad);
+    console.log('Telefono: ' + telefono);
 
-//Creacion de un arreglo de usuarios.
-const usuarios = [felipe,toto];
 
-// Convertir el arreglo de usuarios a una cadena JSON
-const jsonUsuarios = JSON.stringify(usuarios);
+    // Aquí puedes enviar los datos al servidor para autenticación
+    // Esto generalmente se hace mediante una solicitud AJAX a un script en el servidor
+    // donde se realiza la autenticación y se manejan las sesiones.
 
-// Guardar la cadena JSON en un archivo local
-const fs = require("fs");
-fs.writeFileSync("Usuarios.json",jsonUsuarios);
-
-// Mostrando el archivo JSON
-console.log(jsonUsuarios);
+    // Por motivos de seguridad, la autenticación real debe hacerse en el lado del servidor.
+});
