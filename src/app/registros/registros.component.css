@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    font-family:  'Roboto', sans-serif;
+    color: #0f172a;
+    background-color: #f1f5f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 80%;
+    height: 700px;
+    margin: 0 auto;
+    border: 10px solid #0f172a;
+}
+
+.item{
+    width: 50px;
+    height: 50px;
+    background-color: #fb7185;
+    padding: 1em;
+    font-weight: 700;
+    color: #f1f5f9;
+    text-align: center;
+    border: 10px solid #bd0824;
+    border-radius: 10px;
+}
+
+.container{
+    display: flex;
+}
