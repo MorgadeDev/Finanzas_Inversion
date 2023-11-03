@@ -1,0 +1,135 @@
+<!---------------------  Mostra cuentas ------------------------->
+<div *ngIf="cuentas.length > 0">
+  <h2>Cuentas:</h2>
+    <div *ngFor="let cuenta of cuentas">
+
+      <div id="cuentaDiv">
+          <label>Nombre: {{ cuenta.Nombre }} </label>
+          <br>
+          <label>Moneda: {{ cuenta.Moneda }} </label>
+          <br>
+          <label>Monto: {{ cuenta.Monto }} </label>
+      </div>
+      <br>
+  </div>
+</div>
+<!-- ---------------------------------------- -->
+
+<!---------------------  Agregar Cuenta ------------------------->
+<button (click)="mostrarFormularioAgregarCuenta()">Agregar Cuenta</button>
+
+<form *ngIf="mostrarFormulario" (ngSubmit)="agregarCuenta()">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="nuevaCuenta.Nombre" required>
+  
+    <label for="monto">Monto:</label>
+    <input type="number" id="monto" name="monto" [(ngModel)]="nuevaCuenta.Monto" required>
+  
+    <label for="moneda">Moneda:</label>
+    <input type="text" id="moneda" name="moneda" [(ngModel)]="nuevaCuenta.Moneda" required>
+  
+    <button type="submit">Agregar Cuenta</button>
+</form>
+
+
+<!---------------------  Borrra Cuenta ------------------------->
+<button (click)="mostrarFormularioBorrarCuenta()">Borrar Cuenta</button>
+
+<form *ngIf="mostrarFormularioBorrar" (ngSubmit)="borrarCuenta()">
+    <label for="cuentaSeleccionada">Selecciona una cuenta para borrar:</label>
+    <select id="cuentaSeleccionada" name="cuentaSeleccionada" [(ngModel)]="nombreCuentaSeleccionada">
+      <option *ngFor="let cuenta of cuentas" [value]="cuenta.Nombre">{{ cuenta.Nombre }}</option>
+    </select>
+    <button type="submit">Confirmar Borrar</button>
+</form>
+
+
+<!--------------------- Boton MENU Registros  ------------------------->
+<div>
+  <button id="MagiButton" mat-button [matMenuTriggerFor]="menu">Abrir Menú</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="opcion1()">Ingreso</button>
+    <button mat-menu-item (click)="opcion2()">Gasto</button>
+    <button mat-menu-item (click)="opcion3()">Transferencia</button>
+  </mat-menu>
+
+  <!---------------------  Registrar Ingreso ------------------------->
+  <div *ngIf="mostrarFormularioIngreso">
+    <form  (ngSubmit)="sumarMonto()">
+      <div class="form-group">
+        <label for="cuenta">Selecciona una cuenta:</label>
+        <select id="cuenta" name="cuenta" [(ngModel)]="cuentaSeleccionada">
+          <option [ngValue]="null">Selecciona una cuenta</option>
+          <option *ngFor="let cuenta of cuentas" [ngValue]="cuenta.ID">{{ cuenta.Nombre }}</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="monto">Monto a sumar:</label>
+        <input type="number" id="monto" name="monto" [(ngModel)]="monto" required>
+      </div>
+    
+      <button type="submit">Sumar Monto</button>
+    </form>
+      </div>
+
+  <!---------------------  Registrar Gastos ------------------------->
+  <div *ngIf="mostrarFormularioGasto">
+    <form  (ngSubmit)="RestarMonto()">
+      <div class="form-group">
+        <label for="cuenta">Selecciona una cuenta:</label>
+        <select id="cuenta" name="cuenta" [(ngModel)]="cuentaSeleccionada">
+          <option [ngValue]="null">Selecciona una cuenta</option>
+          <option *ngFor="let cuenta of cuentas" [ngValue]="cuenta.ID">{{ cuenta.Nombre }}</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="monto">Gasto:</label>
+        <input type="number" id="monto" name="monto" [(ngModel)]="monto" required>
+      </div>
+    
+      <button type="submit">Registrar Gasto</button>
+    </form>
+      </div>
+
+      
+  <!---------------------  Registrar Transferencias ------------------------->
+
+  <div *ngIf="mostrarFormularioTransferencia">
+
+    <form  (ngSubmit)="Origen()">
+      <div class="form-group">
+        <label for="cuenta">Selecciona una cuenta Origen:</label>
+        <select id="cuenta" name="cuenta" [(ngModel)]="cuentaSeleccionada">
+          <option [ngValue]="null">Selecciona una cuenta</option>
+          <option *ngFor="let cuenta of cuentas" [ngValue]="cuenta.ID">{{ cuenta.Nombre }}</option>
+        </select>
+      </div>
+      <button type="submit">Origen</button>
+     
+    </form>
+
+    <form (ngSubmit)="Transferencia()" >
+      <br>    
+      <div class="form-group">
+        <label for="cuenta">Selecciona una cuenta Destino:</label>
+        <select id="cuenta" name="cuenta" [(ngModel)]="cuentaDestino">
+          <option [ngValue]="null">Selecciona una cuenta</option>
+          <option *ngFor="let cuenta of cuentasVisibles" [ngValue]="cuenta.ID">{{ cuenta.Nombre }}</option>
+        </select>
+      </div>
+    
+      <div class="form-group">
+        <label for="monto">Transferencia:</label>
+        <input type="number" id="monto" name="monto" [(ngModel)]="monto" required>
+      </div>
+    
+      <button type="submit">Registrar Transferencia</button>
+
+      <div *ngIf="mostrarAlertaFondosInsuficientes">
+        <h1 id="AlertaFondos">Fondos Insuficientes</h1>
+      </div>
+
+    </form>
+      </div>
