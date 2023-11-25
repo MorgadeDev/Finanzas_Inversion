@@ -1,0 +1,17 @@
+<div *ngFor="let movimiento of movimientos" class="movimiento">
+    <span>ID: {{movimiento.id}}</span>
+    <br>
+    <span>Nombre Cuenta Origen: {{movimiento.nombreCuentaOrigen}}</span>
+    <br>
+    <span>Monto: {{movimiento.monto}}</span>
+    <br>
+    <span>Moneda: {{movimiento.moneda}}</span>
+    <br>
+    <span>Fecha: {{movimiento.fecha | date}}</span>
+    <br>
+    <span>Tipo: {{movimiento.tipo}}</span>
+    <br>
+    <span>Descripción: {{movimiento.descripcion}}</span>
+    <br>
+    <a routerLink="/editar/{{movimiento.id}}" class="editar">Editar</a>
+  </div>

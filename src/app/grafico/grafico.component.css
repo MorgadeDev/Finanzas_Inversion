@@ -1,0 +1,9 @@
+.pie {
+    width: 90%;
+}
+.charts{
+    display: flex;
+    flex: 0 1 calc(50% - 16px); /* Esto crea una cuadrícula de 3 columnas */
+    margin: 8px;
+    height: 50%;
+}

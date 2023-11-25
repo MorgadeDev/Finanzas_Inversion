@@ -1,1 +1,18 @@
-<p>mercado works!</p>
+<select [(ngModel)]="opcionSeleccionada">
+    <option *ngFor="let opcion of nombres" [value]="opcion.ticker">{{ opcion.ticker }}</option>
+  </select>
+  
+  <div *ngFor="let elemento of nombres">
+    <!-- Solo muestra la información detallada de la opción seleccionada -->
+    <div *ngIf="opcionSeleccionada === elemento.ticker">
+      {{ elemento.ticker }} - {{ elemento.data.price }}
+    </div>
+  </div>
+  
+  <div class="line" [chart]="lineChart">
+  </div>
+  <h4 id="texto">YPF CONVIENE MAS</h4>
+  <div class="line" [chart]="lineChart2">
+  </div>
+  
+  

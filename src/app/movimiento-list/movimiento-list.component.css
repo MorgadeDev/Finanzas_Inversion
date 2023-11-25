@@ -1,0 +1,18 @@
+.movimiento {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 500px; /* Ajusta el ancho según tus necesidades */
+  }
+  
+  .movimiento .editar {
+    display: block;
+    text-align: right;
+    margin-top: 5px;
+    color: #007bff; /* Color azul para simular un enlace */
+    cursor: pointer;
+  }
+  
+  .movimiento .editar:hover {
+    text-decoration: underline;
+  }

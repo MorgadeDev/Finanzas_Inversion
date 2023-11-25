@@ -1,3 +1,55 @@
-.demo-table {
-    width: 100%;
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, #e0e0e0, #ffffff);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  #cuentaDiv {
+    background-color: #f3f3f3;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  #MagiButton {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  #AlertaFondos {
+    display: none;
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 250px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  button, select, input {
+    margin-top: 5px;
+  }
+  
+  .cuenta-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }

@@ -1,10 +1,19 @@
+
 .grid-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-  
+  #appCuentas {
+    overflow: auto;
+  }
+  #grafico{
+    width: 50px
+  }
   .grid-item {
     flex: 0 1 calc(33.33% - 16px); /* Esto crea una cuadrícula de 3 columnas */
     margin: 8px;
+    width: 40vw;
+    height: 90vh;
+    overflow: auto;
   }

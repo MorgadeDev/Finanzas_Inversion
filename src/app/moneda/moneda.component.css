@@ -1,25 +1,10 @@
 .example-radio-group {
     display: flex;
     flex-direction: column;
-    margin: 15px 0;
     align-items: flex-start;
     
   }
-  
-  .example-radio-button {
-    margin: 5px;
-  }
-
   .example-viewport {
-    height: 25%;
-    width: 25%;
-    border: 1px solid black;
+    height: 100%;
+    width: 100%;
   }
-  
-  .example-item {
-    height: 50px;
-  }
-
-
-
-  

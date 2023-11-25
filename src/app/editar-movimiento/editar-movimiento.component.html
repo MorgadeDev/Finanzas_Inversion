@@ -1,0 +1,41 @@
+<div *ngIf="movimientoEnEdicion" class="edicion-container">
+    <h2>Editar Movimiento</h2>
+  
+    <div class="campo-edicion">
+      <label for="nombreCuentaOrigen">Nombre de la Cuenta Origen:</label>
+      <input type="text" id="nombreCuentaOrigen" [(ngModel)]="movimientoEnEdicion.nombreCuentaOrigen" />
+    </div>
+  
+    <div class="campo-edicion">
+      <label for="monto">Monto:</label>
+      <input type="number" id="monto" [(ngModel)]="movimientoEnEdicion.monto" />
+    </div>
+  
+    <div class="campo-edicion">
+      <label for="moneda">Moneda:</label>
+      <input type="text" id="moneda" [(ngModel)]="movimientoEnEdicion.moneda" />
+    </div>
+  
+    <div class="campo-edicion">
+      <label for="fecha">Fecha:</label>
+      <input type="date" id="fecha" [(ngModel)]="movimientoEnEdicion.fecha" />
+    </div>
+  
+    <div class="campo-edicion">
+      <label for="tipo">Tipo:</label>
+      <select id="tipo" [(ngModel)]="movimientoEnEdicion.tipo">
+        <option value="Ingreso">Ingreso</option>
+        <option value="Gasto">Gasto</option>
+        <option value="Transferencia">Transferencia</option>
+      </select>
+    </div>
+  
+    <div class="campo-edicion">
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" [(ngModel)]="movimientoEnEdicion.descripcion"></textarea>
+    </div>
+  
+    <div class="botones-edicion">
+      <button (click)="guardarEdicion()">Guardar y Salir</button>
+    </div>
+  </div>

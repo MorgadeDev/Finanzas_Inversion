@@ -1,46 +1,46 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { MatToolbarModule } from '@angular/material/toolbar';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MovimientoListComponent } from './movimiento-list/movimiento-list.component';
+import { MovimientoDetailComponent } from './movimiento-detail/movimiento-detail.component';
+import { MovimientoComponent } from './movimiento/movimiento.component';
+import { EditarMovimientoComponent } from './editar-movimiento/editar-movimiento.component';
+import { FormsModule } from '@angular/forms';
 import { BilleteraComponent } from './billetera/billetera.component';
-import { MercadoComponent } from './mercado/mercado.component';
-import { GraficoComponent } from './grafico/grafico.component';
 import { CuentasComponent } from './cuentas/cuentas.component';
-import { RegistrosComponent } from './registros/registros.component';
-import { MonedaComponent } from './moneda/moneda.component';
-import {MatButtonModule} from '@angular/material/button';
+import { GraficoComponent } from './grafico/grafico.component';
 import { ChartModule } from 'angular-highcharts';
+import { MercadoComponent } from './mercado/mercado.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MonedaComponent } from './moneda/moneda.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    AboutComponent,
+    MovimientoListComponent,
+    MovimientoDetailComponent,
+    MovimientoComponent,
+    EditarMovimientoComponent,
     BilleteraComponent,
-    MercadoComponent,
     GraficoComponent,
-    RegistrosComponent,
-       
+    MercadoComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatToolbarModule,
     NavbarComponent,
-    MatButtonModule,
-    MonedaComponent,
+    FormsModule,
+    CuentasComponent,
     ChartModule,
-    CuentasComponent
-    
+    HttpClientModule,
+    MonedaComponent,
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

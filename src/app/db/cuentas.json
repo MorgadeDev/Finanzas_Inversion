@@ -1,0 +1,40 @@
+{
+    "movimientos": [ 
+      {"id":4,"nombre":"Paraiso","monto": 500000,"tipo": "USD","fecha": "20/11/2023","move": "Ingreso","desc": "Servicios Exterior"},
+      {"id":3,"nombre":"Colchon","monto": 100,"tipo": "USD","fecha": "20/11/2023","move": "Gasto","desc": "Ahorro Universidad"},
+      {"id":3,"nombre":"Colchon","monto": 500,"tipo": "USD","fecha": "20/11/2023","move": "Gasto","desc": "Ahorro Universidad"},
+      {"id":3,"nombre":"Colchon","monto": 1500,"tipo": "USD","fecha": "20/11/2023","move": "Ingreso","desc": "Ahorro Universidad"},
+      {"id":2,"nombre":"Santander","monto": 1700000,"tipo": "ARG","fecha": "20/11/2023","move": "Ingreso","desc": " Desposito Haberes"},
+      {"id":1,"nombre":"BBVA","monto": 150,"tipo": "USD","fecha": "20/11/2023","move": "Gasto","desc": "Divison de Herencia"},
+      {"id":1,"nombre":"BBVA","monto": 300,"tipo": "USD","fecha": "20/11/2023","move": "Ingreso","desc": "herencia Abuela"}
+    ],
+    "cuentas": [       {
+            "id": 1,
+            "nombre": "Cuenta 1",
+            "monto": 1000,
+            "moneda": "USD"
+            
+        },
+        {
+            "id": 1,
+            "nombre": "Cuenta 1",
+            "monto": 1000,
+            "moneda": "USD"
+            
+        },
+        {
+            "id": 1,
+            "nombre": "Cuenta 1",
+            "monto": 1000,
+            "moneda": "USD"
+            
+        },
+        {
+            "id": 1,
+            "nombre": "Cuenta 1",
+            "monto": 1000,
+            "moneda": "USD"
+            
+        }
+    ] 
+}
